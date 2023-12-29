@@ -1,0 +1,25 @@
+%btn {
+    // font-weight: bold;
+
+    color: #fff;
+    text-align: center;
+
+    font-size: 1rem;
+
+    border: 0px;
+    outline: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s all linear;
+
+    background: linear-gradient(to bottom, $mc, $mc2);
+
+    @media screen and (min-width:768px) {
+        font-size: 1.2rem;
+    }
+
+
+    &:hover {
+        transform: scale(.95);
+    }
+}

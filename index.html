@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Dictionary App | JavaScript App</title>
+
+		<link rel="icon" href="img/logo.png">
+
+		<meta name="description"
+			content="A dictionary application that provides definitions, examples, and synonyms for English words.">
+
+		<meta name="keywords"
+			content="dictionary, English words, definitions, examples, synonyms, language learning">
+
+		<meta name="theme-color" content="#fb4c5f">
+
+		<link rel="stylesheet" type="text/css" href="css/loader.css" media="all">
+
+		<link rel="stylesheet" type="text/css" href="css/home.css" media="all">
+
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+		<!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	</head>
+
+	<body>
+
+		<div id="loadingDiv">
+			<div class="loader">Loading...</div>
+		</div>
+
+		<div id="body">
+			<div class="wrapper">
+
+				<h1>English Dictionary</h1>
+
+				<div class="search">
+					<section class="input-container">
+						<input type="text" placeholder="Search a word" required
+							spellcheck="false">
+						<i class="fas fa-search"></i>
+						<span class="material-icons fas fa-times"></span>
+					</section>
+					<button id="searchButton">
+						Search
+					</button>
+				</div>
+
+				<p class="info-text">Type any existing word and press enter or 'search'
+					button to get meaning,
+					example, synonyms, etc.</p>
+
+				<ul>
+					<li class="word">
+						<div class="details">
+							<p>__</p>
+							<span>_ _</span>
+						</div>
+						<i class="fas fa-volume-up"></i>
+					</li>
+					<div class="content">
+						<li class="meaning">
+							<div class="details">
+								<p>Meaning</p>
+								<span>___</span>
+							</div>
+						</li>
+						<li class="example">
+							<div class="details">
+								<p>Example</p>
+								<span>___</span>
+							</div>
+						</li>
+						<li class="synonyms">
+							<div class="details">
+								<p>Synonyms</p>
+								<div class="list"></div>
+							</div>
+						</li>
+					</div>
+				</ul>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/loader.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
+
+</html>

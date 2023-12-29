@@ -1,0 +1,13 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline:none;
+    // transition: .3s all linear;
+}
+::selection{
+    color: #fff;
+    background: $mc;
+    font-weight: bold;
+  }

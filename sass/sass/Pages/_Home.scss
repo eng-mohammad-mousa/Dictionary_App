@@ -1,0 +1,244 @@
+#body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, $mc, $mc2);
+}
+
+.wrapper {
+    width: 560px;
+    border-radius: 7px;
+    background: #fff;
+    padding: 25px 28px 45px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+
+    h1 {
+        font-size: 32px;
+        font-weight: bold;
+        // font-style: italic;
+        text-align: center;
+        text-shadow: 1px 1px 3px $mc;
+        letter-spacing: 1px;
+
+    }
+
+    .search {
+        position: relative;
+        margin: 35px 0 18px;
+
+        display: flex;
+        justify-content: space-between;
+
+        .input-container {
+            width: 100%;
+            position: relative;
+
+            input {
+                height: 53px;
+                width: 100%;
+                outline: none;
+                font-size: 16px;
+                border-radius: 5px;
+                padding: 0 42px;
+                border: 1px solid #999;
+                // transition: .3s all linear;
+
+                &:focus {
+                    padding: 0 41px;
+                    border: 2px solid $mc;
+
+                    &~i {
+                        color: $mc;
+                    }
+                }
+
+                &:valid~span {
+                    display: block;
+                }
+
+                &::placeholder {
+                    color: #B8B8B8;
+                }
+
+            }
+
+            :where(i, span) {
+                position: absolute;
+                top: 50%;
+                color: #999;
+                transform: translateY(-50%);
+            }
+
+            i {
+                left: 18px;
+                pointer-events: none;
+                font-size: 16px;
+            }
+
+            span {
+                right: 15px;
+                cursor: pointer;
+                font-size: 18px;
+                display: none;
+            }
+
+
+        }
+
+
+        button {
+
+            @extend %btn;
+            width: 110px;
+            margin-left: 10px;
+
+        }
+
+    }
+
+    .info-text {
+        font-size: 13px;
+        color: #9A9A9A;
+        margin: -3px 0 -10px;
+        text-align: center;
+
+        span {
+            font-weight: 500;
+        }
+
+    }
+
+    ul {
+        max-height: 0;
+        opacity: 0;
+        padding-right: 1px;
+        overflow-y: hidden;
+        transition: all 0.2s ease;
+
+        li {
+            display: flex;
+            list-style: none;
+            margin-bottom: 14px;
+            align-items: center;
+            padding-bottom: 17px;
+            border-bottom: 1px solid #D9D9D9;
+            justify-content: space-between;
+
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+
+        }
+
+        .word {
+            p {
+                font-size: 22px;
+                font-weight: 500;
+            }
+
+            span {
+                font-size: 12px;
+                color: #989898;
+            }
+
+            i {
+                color: #999;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            max-height: 215px;
+            overflow-y: auto;
+
+            // &::-webkit-scrollbar {
+            //     // width: 0px;
+            // }
+
+            li {
+                .details {
+                    padding-left: 10px;
+                    border-radius: 4px 0 0 4px;
+                    border-left: 3px solid $mc;
+
+                    p {
+                        font-size: 17px;
+                        font-weight: 500;
+                    }
+
+                    span {
+                        font-size: 15px;
+                        color: #7E7E7E;
+                    }
+
+                }
+            }
+
+            .synonyms {
+                .list {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                span {
+                    cursor: pointer;
+                    margin-right: 5px;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+.wrapper.active {
+
+    .info-text {
+        display: none !important;
+    }
+
+    ul {
+        opacity: 1 !important;
+        max-height: 303px !important;
+    }
+
+}
+
+
+
+@media (max-width: 575px) {
+    #body {
+        padding: 0 10px;
+    }
+
+    .wrapper {
+        max-width: 97%;
+        padding: 23px 20px 40px;
+
+        header {
+            font-size: 26px;
+        }
+
+        .search {
+            margin: 30px 0 18px;
+
+            input {
+                height: 51px;
+            }
+        }
+    }
+
+
+    ul .word p {
+        font-size: 21px;
+    }
+}
