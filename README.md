@@ -29,7 +29,7 @@ Users can enter an English word in the search bar, and the app will display the 
 
 ## Installation
 
-Follow the steps below to run the Snake Game project:
+To use a dictionary app, you'll typically need to follow these steps:
 
 1. Download or clone the project from the GitHub repository:
    ```
