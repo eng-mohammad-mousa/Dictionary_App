@@ -5,6 +5,11 @@ It aims to assist language learners and users looking to expand their English vo
 
 <br>
 
+## Live Demo
+Experience the Dictionary App live by visiting the following link: [Live Demo](https://eng-mohammad-mousa.github.io/Dictionary_App/)
+
+<br>
+
 ## Description
 
 This dictionary app is designed to help users find meanings, examples, and synonyms for English words.
